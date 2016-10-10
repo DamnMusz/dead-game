@@ -24,3 +24,39 @@
 .item {
     color: #000000;
 }
+
+@keyframes animatedBackgroundToLeft {
+    0% { background-position: 0 0; }
+    100% { background-position: -350px 0; }
+}
+@-moz-keyframes animatedBackgroundToLeft {
+    0% { background-position: 0 0; }
+    100% { background-position: -350px 0; }
+}
+@-webkit-keyframes animatedBackgroundToLeft {
+    0% { background-position: 0 0; }
+    100% { background-position: -350px 0; }
+}
+@-ms-keyframes animatedBackgroundToLeft {
+    0% { background-position: 0 0; }
+    100% { background-position: -350px 0; }
+}
+@-o-keyframes animatedBackgroundToLeft {
+    0% { background-position: 0 0; }
+    100% { background-position: -350px 0; }
+}
+
+.login {
+    background-image: url('../img/login_background.jpg');
+    height: 100%;
+    max-height: 100%;
+    /*animation: animatedBackgroundToLeft 100s linear infinite;
+    -moz-animation: animatedBackgroundToLeft 100s linear infinite;
+    -webkit-animation: animatedBackgroundToLeft 100s linear infinite;
+    -ms-animation: animatedBackgroundToLeft 100s linear infinite;
+    -o-animation: animatedBackgroundToLeft 100s linear infinite;*/
+}
+
+.item-md-label .input-label {
+    color: #808080;
+}

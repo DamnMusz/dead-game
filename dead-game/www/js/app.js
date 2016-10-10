@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
+angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'ionMdInput'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -19,8 +19,7 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
-    $stateProvider.state.go('login');
+    //$stateProvider.state.go('login');
   });
 })
 
@@ -60,6 +59,15 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
         }
       }
     })
+      .state('app.character', {
+          url: '/character',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/character.html',
+                  controller: 'CharacterCtrl'
+              }
+          }
+      })
     .state('app.login', {
         url: '/login',
         views: {
