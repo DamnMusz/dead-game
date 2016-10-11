@@ -53,15 +53,10 @@ angular.module('starter.controllers', [])
   ];
 })
 
-    .controller('CharacterCtrl', function ($scope) {
-        $scope.playlists = [
-          { title: 'Rick Grimes', id: 1 },
-          { title: 'Daryl Dixon', id: 2 },
-          { title: 'Carol Peletier', id: 3 },
-          { title: 'Michonne', id: 4 },
-          { title: 'Glenn', id: 5 },
-          { title: 'Maggie', id: 6 }
-        ];
+    .controller('CharacterCtrl', function ($scope, $ionicSideMenuDelegate, $ionicNavBarDelegate, $ionicHistory) {
+        $ionicHistory.clearHistory();
+        $ionicSideMenuDelegate.canDragContent(true);
+        $ionicNavBarDelegate.showBackButton(false);
     })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
